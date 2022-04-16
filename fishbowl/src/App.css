@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+
+::placeholder {
+  color: white;
+}
+
+.login-background {
+  background-color: #97BA9E;
+  min-width: 100vw;
+  min-height: 120vh;
+}
+
+.login-title {
+  font-size: 40px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+.login-section {
+  width: 40%;
+  height: 80%;
+  margin: auto;
+}
+
+.signin-input-fields {
+  font-size: 24px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  color: white;
+  border-color: white;
+  outline: none;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.login-buttons {
+  width: 100%;
+}
+
+.login-button {
+  float: right;
+  width: 150px;
+  height:30px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
