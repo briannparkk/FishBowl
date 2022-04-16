@@ -1,17 +1,12 @@
+html, body {
+  margin:0px;
+  height: 100%;
+  width: 100%;
+}
+
 .App {
   text-align: center;
-  font-family: 'Arsenal', sans-serif;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: 'Arsenal', sans-serif !important;
 }
 
 .App-header {
@@ -29,23 +24,87 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* home page styling */
+#home {
+  background-color: #6B8A81;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+#homeHeader {
+  font-size: 90px;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+#homeContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 250px;
+  justify-content: center;
+}
+
+/* Class List styling */
+.classContainer {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  background: #516E73;
+  color: white;
+  border: 1px solid #a0a096;
+  width: 400px;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-family: 'Arsenal', sans-serif !important;
+}
+
+#listHeader {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+#listHeader div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.classList {
+  display: grid;
+  max-height: 350px;
+  grid-template-rows: auto;
+  row-gap: 5px;
+  overflow:scroll;
+  margin-bottom: 1rem;
+}
+
+/* item in class list styling */
+#classItem {
+  min-height: fit-content;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 15px;
+  margin-right: 25px;
+  font-size: 30px;
+  border-radius: 20px;
+  border: white solid 0.5px;
+  text-align: left;
+}
+
+#classItem img {
+  float: right;
 }
 
 /* Calendar styling */
 .react-calendar {
-  width: 350px;
-  max-width: 100%;
+  width: 550px;
+  height: fit-content;
+  /* max-width: 100%; */
   background: #516E73;
   border: 1px solid #a0a096;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.125em;
+  line-height: 2em;
   border-radius: 20px;
   padding: 20px 20px;
 }
@@ -79,15 +138,17 @@
 .react-calendar__navigation {
   display: flex;
   height: 40px;
-  margin-bottom: 0.5em;
+  margin-top: 10px;
+  margin-bottom: 1em;
 }
 .react-calendar__navigation button {
   /* min-width: 44px; */
   background: none;
   color: white;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 35px;
   text-transform: lowercase;
+  font-family: 'Arsenal', sans-serif !important;
 }
 .react-calendar__navigation button:disabled {
   background-color: #f0f0f0;
@@ -97,10 +158,14 @@
   background-color: #e6e6e6;
 }
 
+.react-calendar__month-view__days {
+  height: 350px;
+}
+
 .react-calendar__month-view__weekdays {
   text-align: center;
   text-transform: lowercase;
-  font-size: 0.9em;
+  font-size: 1.5em;
 }
 .react-calendar__month-view__weekdays__weekday {
   padding: 0.5em;
@@ -126,13 +191,12 @@
 }
 .react-calendar__tile {
   /* min-height: 100%; */
-  padding: 10px 6.6667px;
+  padding: 10px 6.6666666666667px;
   background: none;
   text-align: center;
-  line-height: 22px;
+  /* line-height: 1em; */
   color: white;
-  border-radius: 50%;
-  border: white solid 0.5px !important;
+  border: white solid 1px !important;
 }
 .react-calendar__tile:disabled {
   background-color: #f0f0f0;

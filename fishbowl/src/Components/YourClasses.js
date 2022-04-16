@@ -10,9 +10,7 @@ export default function YourClasses(props) {
             <div>
                 <img alt="remove class" src={Remove}/> 
             </div>
-            <div>
-                <h1>Your Classes</h1>
-            </div>
+            <div>Your Classes</div>
             <div>
                 <img alt="add class" src={Add}/>
             </div>
@@ -21,10 +19,11 @@ export default function YourClasses(props) {
               <ClassItem name={'cs 180'}/>
               <ClassItem name={'cs m152a'}/>
               <ClassItem name={'cs 111'}/>
+              <ClassItem name={'class 4'}/>
               <ClassItem name={'office hours'}/>
-              <ClassItem name={'class 5'}/>
-              <ClassItem name={'class 6'}/>
-              <ClassItem name={'class 7'}/>
+              <ClassItem name={'meeting 1'}/>
+              <ClassItem name={'meeting 2'}/>
+              <ClassItem name={'meeting 3'}/>
           </div>
 
       </div>
