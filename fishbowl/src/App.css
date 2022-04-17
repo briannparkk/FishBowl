@@ -178,6 +178,7 @@ button:hover {
   text-transform: lowercase;
   font-size: 1.5em;
 }
+
 .react-calendar__month-view__weekdays__weekday {
   padding: 0.5em;
   color: white;
@@ -357,4 +358,124 @@ button:hover {
   font-weight: 500;
 }
 
+
+::placeholder {
+  color: white;
+}
+
+.login-background {
+  background-color: #97BA9E;
+  min-width: 100vw;
+  min-height: 120vh;
+}
+
+.login-title {
+  font-size: 40px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+.login-section {
+  width: 40%;
+  height: 80%;
+  margin: auto;
+}
+
+.signin-input-fields {
+  font-size: 24px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  color: white;
+  border-color: white;
+  outline: none;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.login-buttons {
+  width: 100%;
+}
+
+.login-button {
+  float: right;
+  width: 150px;
+  height:30px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.student-meeting-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.student-vid-half {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.student-question-half {
+  overflow-y: auto;
+  float:right;
+  width: 50%;
+  height: 100%;
+  background-color: #FEC5BB;
+  color: white;
+
+}
+
+.student-question-box {
+  width: 80%;
+  height: 80px;
+  background-color: #F8EDEB;
+  margin: auto;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.upvote-count {
+  position: absolute;
+  right: 35px;
+  bottom: -35px;
+  height: 64px;
+  margin: auto;
+  color: #7D8597;
+}
+
+.student-ask-box {
+  width: 80%;
+  height: 64px;
+  background-color: #F8EDEB;
+  margin: auto;
+  border-radius: 10px;
+  border: none;
+  color: #7D8597;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.student-ask-box::placeholder {
+  color: #7D8597;
+  font-size: 16px;
+}
+
+.student-ask-button {
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid white;
+  color: white;
+  background-color: #E8A598;
+  margin-left: 400px;
+  width: 80px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+}
 
