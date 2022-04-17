@@ -30,7 +30,6 @@ export default function SignIn(){
   //have user try to login
   function logIn(){
     let email = document.getElementById("email").value;
-    
     let pwd = document.getElementById("password").value;
     //attempt to use submitted email and password and sign in
     signInWithEmailAndPassword(auth, email, pwd)
