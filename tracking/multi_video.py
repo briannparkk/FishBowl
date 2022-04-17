@@ -18,9 +18,9 @@ def crop(boxes):
 	center = x_coord + (width/2)
 	
 
-	if width < 284:
+	if center < 284:
 		return 0
-	elif width < 569:
+	elif center < 569:
 		return 1
 	else:
 		return 2
@@ -39,7 +39,7 @@ xmax = 853
 while True:
 	
 	curr_time = time.time()
-	if (curr_time - prev_time) > 10:
+	if (curr_time - prev_time) > 3:
 		counter = 10
 
 	if counter > 0:
@@ -57,6 +57,7 @@ while True:
 	
 
 	frame = vs.read()
+	frame= cv2.resize(frame, (1280, 720))
 	#print(frame)
 
 
