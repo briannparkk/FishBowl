@@ -415,6 +415,7 @@ button:hover {
   font-size: 16px;
 }
 
+/* student meeting screen styling */
 .student-meeting-screen {
   width: 100vw;
   height: 100vh;
@@ -428,7 +429,7 @@ button:hover {
 
 .student-question-half {
   overflow-y: auto;
-  float:right;
+  float: right;
   width: 50%;
   height: 100%;
   background-color: #FEC5BB;
@@ -465,6 +466,14 @@ button:hover {
   color: #7D8597;
   font-size: 16px;
   padding: 10px;
+}
+
+.student-ask-box textarea {
+  padding-top: 5;
+  padding-left: 5;
+  line-height: 1em;
+  max-height: 64px;
+  overflow-y: scroll;
 }
 
 .student-ask-box::placeholder {

@@ -23,7 +23,7 @@ export default function StudentMeeting() {
                     ))}
                     <br />
                 </div>
-                <input id="this-question" className='student-ask-box' placeholder='ask the speaker a question'></input> <br/><br/><br/>
+                <textarea id="this-question" className='student-ask-box' placeholder='ask the speaker a question'></textarea> <br/><br/><br/>
                 <button onClick={() => askQuestion()} className='student-ask-button'>ask</button>
             </div>
         </div>
