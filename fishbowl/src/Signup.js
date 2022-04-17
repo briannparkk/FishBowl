@@ -56,7 +56,7 @@ export default function SignUp(){
               </div> <br></br><br></br>
               <div className="login-field">
                   <label htmlFor="userPassword"></label>
-                  <input className="signin-input-fields" placeholder="password" id="password"></input>
+                  <input className="signin-input-fields" placeholder="password" type="password" id="password"></input>
               </div> <br/><br/><br/>
               <div className="login-field">
                   <label htmlFor="userName"></label>

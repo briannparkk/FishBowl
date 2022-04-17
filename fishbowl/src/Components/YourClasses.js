@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import ClassItem from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Components/Class.js';
-import Add from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Plus.svg';
-import Remove from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Remove.svg';
-import AddPopup from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Components/AddPopup.js';
-import DeletePopup from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Components/DeletePopup.js';
+import ClassItem from './Class.js';
+import Add from '../Plus.svg';
+import Remove from '../Remove.svg';
+import AddPopup from './AddPopup.js';
+import DeletePopup from './DeletePopup.js';
 
 export default function YourClasses(props) {
   const [addIsOpen, setAddIsOpen] = useState(false);

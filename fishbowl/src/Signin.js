@@ -22,11 +22,6 @@ export default function SignIn(){
        navigate("/home");
     }
 
-    async function signUp() {
-        navigate("/signup")
-    }
-
-    //have user try to login
   //have user try to login
   function logIn(){
     let email = document.getElementById("email").value;
@@ -53,7 +48,7 @@ export default function SignIn(){
                   </div> <br></br><br></br>
                   <div className="login-field">
                       <label htmlFor="userPassword"></label>
-                      <input className="signin-input-fields" placeholder="password" id="password"></input>
+                      <input className="signin-input-fields" placeholder="password" type="password" id="password"></input>
                   </div> <br/><br/><br/>
                   <div className="login-buttons">
                       <button className="login-button"  onClick={logIn}>log in</button>
