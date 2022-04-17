@@ -1,6 +1,7 @@
 import React from 'react'
 import QuestionBox from './QuestionBox'
 import { useState, setState } from 'react';
+import YoutubeEmbed from './YoutubeEmbed';
 
 export default function StudentMeeting() {
     const [questions, setQuestions] = useState([]);
@@ -13,17 +14,22 @@ export default function StudentMeeting() {
     return (
         <div className='student-meeting-screen'>
             <div className='student-vid-half'>
-                <div style={{paddingTop: '250px', fontSize:'24px'}}>Live Video</div>
+                <div style={{marginLeft: '30px', marginTop: '100px'}}>
+                    <YoutubeEmbed embedId='r2fdsa' />
+                </div>
             </div>
             <div className='student-question-half'>
-                <div style={{color: 'white', paddingTop: '20px', fontSize: '28px'}}>questions</div> <br/>
+                <div style={{textAlign: 'center', color: 'white', paddingTop: '20px', fontSize: '28px'}}>questions</div> <br/>
                 <div>
                     {questions.map((value) => (
                         <QuestionBox text={value}/> 
                     ))}
                     <br />
                 </div>
-                <textarea id="this-question" className='student-ask-box' placeholder='ask the speaker a question'></textarea> <br/><br/><br/>
+                <div className="textbox-wrapper">
+                    <textarea id="this-question" className='student-ask-box' placeholder='ask the speaker a question'></textarea> 
+                </div>
+                <br/><br/><br/>
                 <button onClick={() => askQuestion()} className='student-ask-button'>ask</button>
             </div>
         </div>

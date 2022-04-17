@@ -430,7 +430,7 @@ button:hover {
 .student-question-half {
   overflow-y: auto;
   float: right;
-  width: 50%;
+  width: 40%;
   height: 100%;
   background-color: #FEC5BB;
   color: white;
@@ -441,19 +441,26 @@ button:hover {
   width: 80%;
   height: 80px;
   background-color: #F8EDEB;
-  margin: auto;
+  margin: 0 auto;
   border-radius: 10px;
+  text-align: center;
   position: relative;
   margin-bottom: 20px;
 }
 
 .upvote-count {
   position: absolute;
+  float: right;
+  bottom: -30px;
   right: 35px;
-  bottom: -35px;
   height: 64px;
   margin: auto;
   color: #7D8597;
+}
+
+.textbox-wrapper {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .student-ask-box {

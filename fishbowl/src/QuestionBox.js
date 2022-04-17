@@ -12,7 +12,7 @@ export default function QuestionBox(props) {
     return (
         <div className="student-question-box">
             <p style={{color:'#7D8597', float:'left', paddingLeft:'20px'}}>{props.text}</p>
-            <img onClick={incrementCount} src={frog} style={{cursor: 'pointer', float: 'right', paddingTop:'5px', paddingRight: '20px', width: '40px', height: '40px'}}/>
+            <img alt="" onClick={incrementCount} src={frog} style={{cursor: 'pointer', float: 'right', paddingTop:'5px', paddingRight: '20px', width: '40px', height: '40px'}}/>
             <p class="upvote-count">{count}</p> 
         </div>
     )
