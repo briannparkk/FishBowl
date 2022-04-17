@@ -15,7 +15,7 @@ export default function StudentMeeting() {
         <div className='student-meeting-screen'>
             <div className='student-vid-half'>
                 <div style={{marginLeft: '30px', marginTop: '100px'}}>
-                    <YoutubeEmbed embedId='r2fdsa' />
+                    <YoutubeEmbed embedId='3h' />
                 </div>
             </div>
             <div className='student-question-half'>
