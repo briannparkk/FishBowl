@@ -30,6 +30,8 @@ def trackHelper(frame):
     # returns the bounding boxes for the detected objects
     boxes, weights = hog.detectMultiScale(gray_frame, winStride=(8,8) )
 
+    if type(boxes) == tuple:
+        boxes = np.zeros(1)
     #boxes = np.array([[x, y, x + w, y + h] for (x, y, w, h) in boxes])
 
     return boxes

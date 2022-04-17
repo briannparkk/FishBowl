@@ -9,21 +9,9 @@ import time
 
 import numpy
 import tracking_helper
+import cropping_helper
 
 
-def crop(boxes):
-	first_box = boxes[0]
-	x_coord = first_box[0]
-	width = first_box[2]
-	center = x_coord + (width/2)
-	
-
-	if center < 284:
-		return 0
-	elif center < 569:
-		return 1
-	else:
-		return 2
 
 counter = 0
 boxes = []
@@ -35,42 +23,63 @@ fps = FPS().start()
 section = 1
 xmin = 0
 xmax = 853
+x_full_min = 160
+x_full_max = 1120
+lock = 0
 
 while True:
+
+	#print(x_full_max)
+	#print(x_full_min)
 	
+	frame = vs.read()
+	frame= cv2.resize(frame, (1280, 720))
+
 	curr_time = time.time()
 	if (curr_time - prev_time) > 3:
-		counter = 10
+		counter = 20
 
-	if counter > 0:
+	if counter > 0 and lock == 0:
 		boxes = tracking_helper.trackHelper(frame)
-		print(boxes)
+		#print(boxes)
 		counter -= 1
 		prev_time = time.time()
 		size = numpy.size(boxes)
-		if size != 0:
-			section = crop(boxes)
+		print(type(boxes))
+		if size > 1:
+			section = cropping_helper.crop(boxes)
+			lock = 1
 			print(section)
-
-	# x,y,x,y
 
 	
 
-	frame = vs.read()
-	frame= cv2.resize(frame, (1280, 720))
-	#print(frame)
+	if lock == 1:
+		#counter -= 1
+		if section == 0:
+			if x_full_min == 0 and x_full_max == 960:
+				lock = 0
+			else:
+				x_full_min -= 10
+				x_full_max -= 10
+		elif section == 1:
+			if x_full_min == 160 and x_full_max == 1120:
+				lock = 0
+			elif x_full_min > 160 and x_full_max > 1120:
+				x_full_min -= 10
+				x_full_max -= 10
+			elif x_full_min < 160 and x_full_max < 1120:
+				x_full_min += 10
+				x_full_max += 10
+		elif section == 2:
+			if x_full_min == 320 and x_full_max == 1280:
+				lock = 0
+			else:
+				x_full_min += 10
+				x_full_max += 10
 
+	
 
-
-	if section == 0:
-		cropped = frame[0:720, 0:960]
-	elif section == 1:
-		cropped = frame[0:720, 160:1120]
-	else:
-		cropped = frame[0:720, 320:1280] 
-
-	# cropped = frame[0:720, xmin:xmax]
-
+	cropped = frame[0:720, x_full_min:x_full_max]
 
 	cv2.imshow("Frame", cropped)
 	if cv2.waitKey(1) == ord('q'):
