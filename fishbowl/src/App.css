@@ -4,6 +4,10 @@ html, body {
   width: 100%;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .App {
   text-align: center;
   font-family: 'Arsenal', sans-serif !important;
@@ -34,8 +38,8 @@ html, body {
 
 #homeHeader {
   font-size: 90px;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
 }
 
 #homeContainer {
@@ -56,6 +60,7 @@ html, body {
   border-radius: 20px;
   padding: 10px 30px;
   font-family: 'Arsenal', sans-serif !important;
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
 
 #listHeader {
@@ -69,6 +74,11 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#listHeader button {
+  background-color: transparent;
+  border: none;
 }
 
 .classList {
@@ -107,6 +117,7 @@ html, body {
   line-height: 2em;
   border-radius: 20px;
   padding: 20px 20px;
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
 .react-calendar--doubleView {
   width: 700px;
@@ -231,3 +242,68 @@ html, body {
 .react-calendar--selectRange .react-calendar__tile--hover {
   background-color: #e6e6e6;
 }
+
+/* popup styling */
+.add-section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #CAD2C5;
+  border: 1px solid white;
+  width: 400px;
+  height: 350px;
+  border-radius: 20px;
+  padding-top: 2em;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.add-section-div {
+  text-align: left;
+  margin: 1em auto 1em 10%;
+  color: #627068;
+}
+
+.add-field {
+  font-size: 30px;
+  font-weight: 500;
+  width: 80%;
+  padding: 10px 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #6C736F;
+  color: #49524d;
+}
+
+.add-field:focus {
+  outline: none;
+}
+
+.add-section-div select {
+  color: #49524d;
+}
+
+.add-field ::placeholder {
+  color: #6C736F;
+}
+
+.button-wrapper {
+  display: block;
+  height: fit-content;
+  text-align: right;
+  margin-right: 50px;
+}
+
+.add-button {
+  width: 100px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: #B7CCA9;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+

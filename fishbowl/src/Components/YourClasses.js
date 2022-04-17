@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ClassItem from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Components/Class.js';
 import Add from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Plus.svg';
 import Remove from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Remove.svg';
+import AddPopup from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Components/AddPopup.js';
 
 export default function YourClasses(props) {
+  const [addIsOpen, setAddIsOpen] = useState(false);
+  const [deleteIsOpen, setDeleteIsOpen] = useState(false);
+ 
+  const toggleAddPopup = () => {
+    setAddIsOpen(!addIsOpen);
+  }
+  const toggleDeletePopup = () => {
+    setAddIsOpen(!deleteIsOpen);
+  }
+
     return (
       <div className='classContainer'>
           <div id='listHeader'>
             <div>
-                <img alt="remove class" src={Remove}/> 
+                <button onClick={toggleDeletePopup}>
+                  <img alt="remove class" src={Remove}/> 
+                </button>
             </div>
             <div>Your Classes</div>
             <div>
-                <img alt="add class" src={Add}/>
+                <button onClick={toggleAddPopup}>
+                  <img alt="add class" src={Add}/>
+                </button>
             </div>
           </div>
           <div className='classList'>
@@ -25,7 +40,7 @@ export default function YourClasses(props) {
               <ClassItem name={'meeting 2'}/>
               <ClassItem name={'meeting 3'}/>
           </div>
-
+        {addIsOpen && <AddPopup handleClose={toggleAddPopup}/>}
       </div>
     );
   }
