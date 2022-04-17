@@ -3,6 +3,7 @@ import ClassItem from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src
 import Add from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Plus.svg';
 import Remove from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Remove.svg';
 import AddPopup from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Components/AddPopup.js';
+import DeletePopup from '/Users/tracyzhao/Documents/la_hacks/FishBowl/fishbowl/src/Components/DeletePopup.js';
 
 export default function YourClasses(props) {
   const [addIsOpen, setAddIsOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function YourClasses(props) {
     setAddIsOpen(!addIsOpen);
   }
   const toggleDeletePopup = () => {
-    setAddIsOpen(!deleteIsOpen);
+    setDeleteIsOpen(!deleteIsOpen);
   }
 
     return (
@@ -41,6 +42,7 @@ export default function YourClasses(props) {
               <ClassItem name={'meeting 3'}/>
           </div>
         {addIsOpen && <AddPopup handleClose={toggleAddPopup}/>}
+        {deleteIsOpen && <DeletePopup handleClose={toggleDeletePopup}/>}
       </div>
     );
   }

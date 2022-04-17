@@ -243,7 +243,7 @@ button:hover {
   background-color: #e6e6e6;
 }
 
-/* popup styling */
+/* add popup styling */
 .add-section {
   position: fixed;
   top: 50%;
@@ -257,6 +257,7 @@ button:hover {
   border-radius: 20px;
   padding-top: 2em;
   box-shadow: 0px 4px 4px 0px #00000040;
+  font-family: 'Arsenal', sans-serif !important;
 }
 
 .add-section-div {
@@ -274,6 +275,7 @@ button:hover {
   border: none;
   border-bottom: 1px solid #6C736F;
   color: #49524d;
+  font-family: 'Arsenal', sans-serif;
 }
 
 .add-field:focus {
@@ -301,6 +303,55 @@ button:hover {
   border: 2px solid white;
   border-radius: 10px;
   background: #B7CCA9;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* delete popup styling */
+.delete-section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #F7CBC8;
+  border: 1px solid white;
+  width: 400px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.delete-classes-list {
+  display: grid;
+  max-height: 350px;
+  grid-template-rows: auto;
+  row-gap: 5px;
+  overflow: scroll;
+  list-style: none;
+  font-size: 30px;
+  font-weight: 500;
+  color: #627068;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+.classes-list-item input {
+  transform: scale(1.5);
+}
+
+.classes-list-item label {
+  margin-left: 10px;
+}
+
+.delete-button {
+  width: 120px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: #EBA3A7;
   color: white;
   font-size: 30px;
   font-weight: 500;
