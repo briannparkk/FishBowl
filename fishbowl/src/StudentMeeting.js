@@ -11,7 +11,6 @@ export default function StudentMeeting() {
         console.log(question);
         setQuestions([...questions, question]);
         document.getElementById("this-question").value = "";
-    }
     return (
         <div className='student-meeting-screen'>
             <div className='student-vid-half'>
