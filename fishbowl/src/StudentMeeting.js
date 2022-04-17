@@ -2,8 +2,6 @@ import React from 'react'
 import QuestionBox from './QuestionBox'
 import { useState, setState } from 'react';
 
-
-
 export default function StudentMeeting() {
     const [questions, setQuestions] = useState([]);
     function askQuestion() {
